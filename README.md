@@ -15,5 +15,11 @@
 # 2.创建仓库
 一个git库（仓库）对应一个开源项目<br>
 通过`git`管理仓库
+# 3. issues
+对项目提出问题，与项目发布者进行交流
+# 4. Git安装和使用
+## 4.1 目的
+通过`git`管理`github`托管项目的代码<br>
+官方下载地址：(https://git-scm.com/download/win)  
 
 
