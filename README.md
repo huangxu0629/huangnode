@@ -136,7 +136,7 @@ Hi xiangshuo1992! You've successfully authenticated, but GitHub does not provide
 直接修改项目目录下 .git文件夹下的config文件，将地址修改一下就好了。 <br>
 git地址获取可以看如下图切换 <br>
 ![地址切换](https://img-blog.csdnimg.cn/20181029093141515.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3Nzg5MDU=,size_12,color_FFFFFF,t_70)
-#5. 参考资料
+# 5. 参考资料
 [学习资料](https://blog.csdn.net/weixin_46323637/article/details/108287483)
 
 
