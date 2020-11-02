@@ -115,6 +115,8 @@ ll
 ```
 ssh-keygen -t rsa -C "xiangshuo1992@gmail.com"
 ```
+![图片](https://exp-picture.cdn.bcebos.com/38332303bbea3e8680bc70f75cd4483105eb5548.jpg?x-bce-process=image%2Fresize%2Cm_lfit%2Cw_500%2Climit_1)
+当我们创建好ssh key的时候，我们到我们的用户主目录会发现一个.ssh目录，然后在目录里会有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人
 4. 获取SSH Key
 ```
 cat ~/.ssh/id_rsa.pub
