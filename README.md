@@ -132,6 +132,10 @@ ssh -T git@github.com
 //运行结果出现类似如下
 Hi xiangshuo1992! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+7. 之前已经是https的链接，现在想要用SSH提交怎么办？ <br>
+直接修改项目目录下 .git文件夹下的config文件，将地址修改一下就好了。 <br>
+git地址获取可以看如下图切换。
+!(https://img-blog.csdnimg.cn/20181029093141515.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3Nzg5MDU=,size_12,color_FFFFFF,t_70)
 
 
 
