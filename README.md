@@ -89,14 +89,14 @@ git config --global user.email '邮箱名'
 ```
 ### Github配置SSH Key
 GitHub配置SSH Key的目的是为了帮助我们在通过git提交代码是，不需要繁琐的验证过程，简化操作流程。 <br>
-1. 设置git的user name和email
+1. 设置git的user name和email <br>
 如果你是第一次使用，或者还没有配置过的话需要操作一下命令，自行替换相应字段。
 ```
 git config --global user.name "Luke.Deng"
 git config --global user.email  "xiangshuo1992@gmail.com"
 ```
 `git config --list` 查看当前Git环境所有配置，还可以配置一些命令别名之类的 <br>
-2. 检查是否存在SSH Key
+  2. 检查是否存在SSH Key
 ```
 cd ~/.ssh
 ls
