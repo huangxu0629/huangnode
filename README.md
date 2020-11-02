@@ -40,6 +40,7 @@ Git全称是分布式版本控制系统，可以有效、高速的处理从很�
 ```
 git status
 git add HelloWorld.cpp；
+git add .  (将文件夹中所有文件添加到本地仓库)
 ```
 2. 暂存区转入Git仓库（**本地仓库**） <br>
 ```
@@ -47,9 +48,18 @@ git status
 git commit –m '提交描述'
 ```
 此命令会将git add .存入暂存区的修改文件提交至本地仓库中，若文件未添加至暂存区，则提交时不会提交任何修改。 <br>
+3. 建立本地仓库和github**远程仓库**的关联 <br>
+```
+git remote add origin https://github.com/*****/*****.git   
+origin后面跟你的github仓库地址(ssh地址)
+```
 3. Git仓库同步到Github**远程仓库** <br>
 ```
 git push <远程地址> <本地分支名><:><远程分支名>
+git push -u origin master （第一次使用加上了-u参数，是推送内容并关联分支）
+推送成功后就可以看到远程和本地的内容一模一样，下次只要本地作了提交，就可以通过命令：
+git push origin master
+把最新内容推送到Github上的上
 ```
 上面命令表示，将本地的master分支推送到origin主机的master分支。如果master不存在，则会被新建
 ### 远程仓库（Github对应的项目）复制到本地仓库
