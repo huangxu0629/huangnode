@@ -30,25 +30,53 @@ Git全称是分布式版本控制系统，可以有效、高速的处理从很�
  暂存已经修改的文件最后统一提交到Git仓库中
 3. Git仓库（Git Repository） <br>
 最终确定的文件保存到仓库，成为一个新的版本，并对他人可见
-### 一些常用命令
+### 初始化本地仓库
+1. 创建文件夹 <br>
+2. 在文件夹内初始化Git（创建Git 仓库）<br>
+命令行进入当前目录，使用`git init`命令，在你的项目根目录中新建了一个隐藏文件夹（.git）
+### 本地的代码如何提交到远程仓库中
 * git status: 确定文件当前所处Git工作区域
 1. 工作区文件转入暂存区 <br>
 ```
 git status
 git add HelloWorld.cpp；
 ```
-2. 暂存区转入Git仓库 <br>
+2. 暂存区转入Git仓库（**本地仓库**） <br>
 ```
 git status
 git commit –m '提交描述'
 ```
-3. 删除工作区文件 <br>
+此命令会将git add .存入暂存区的修改文件提交至本地仓库中，若文件未添加至暂存区，则提交时不会提交任何修改。 <br>
+3. Git仓库同步到Github**远程仓库** <br>
+```
+git push <远程地址> <本地分支名><:><远程分支名>
+```
+上面命令表示，将本地的master分支推送到origin主机的master分支。如果master不存在，则会被新建
+### 远程仓库（Github对应的项目）复制到本地仓库
+```
+git clone 仓库地址(仓库地址在clone or download按钮下取得)
+```
+### 一些常见命令
+1. 删除工作区文件 <br>
 ```
 git rm -f 文件名
 ```
-4. 修改文件 <br>
+2. 修改文件 <br>
 ```
 vi 文件名
+```
+### 本地如何进行分支管理
+1. 查看本地有哪些分支
+```
+git branch
+```
+2. 切换分支
+```
+git checkout 分支名
+```
+3. 新建分支
+```
+git branch 分支名
 ```
 ### Git基本设置
 1. 设置用户名 <br>
@@ -58,6 +86,44 @@ git config --global user.name '用户名'
 2. 设置用户邮箱 <br>
 ```
 git config --global user.email '邮箱名'
+```
+### Github配置SSH Key
+GitHub配置SSH Key的目的是为了帮助我们在通过git提交代码是，不需要繁琐的验证过程，简化操作流程。 <br>
+1. 设置git的user name和email
+如果你是第一次使用，或者还没有配置过的话需要操作一下命令，自行替换相应字段。
+```
+git config --global user.name "Luke.Deng"
+git config --global user.email  "xiangshuo1992@gmail.com"
+```
+`git config --list` 查看当前Git环境所有配置，还可以配置一些命令别名之类的 <br>
+2. 检查是否存在SSH Key
+```
+cd ~/.ssh
+ls
+或者
+ll
+//看是否存在 id_rsa 和 id_rsa.pub文件，如果存在，说明已经有SSH Key
+```
+3. 如果没有SSH Key，则需要先生成一下
+```
+ssh-keygen -t rsa -C "xiangshuo1992@gmail.com"
+```
+4. 获取SSH Key
+```
+cat ~/.ssh/id_rsa.pub
+或者
+cat id_rsa.pub
+//拷贝秘钥 ssh-rsa开头
+```
+5. GitHub添加SSH Key <br>
+```
+首先在个人中心点击settings进入到个人界面下拉选择SSH and GPG keys在右上角有个叫New SSH keys（新的密钥）点击进去添加SSH密钥
+```
+6. 测试是否成功配置SSH Key
+```
+ssh -T git@github.com
+//运行结果出现类似如下
+Hi xiangshuo1992! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 
