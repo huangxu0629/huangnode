@@ -148,7 +148,16 @@ Hi xiangshuo1992! You've successfully authenticated, but GitHub does not provide
 直接修改项目目录下 .git文件夹下的config文件，将地址修改一下就好了。 <br>
 git地址获取可以看如下图切换 <br>
 ![地址切换](https://img-blog.csdnimg.cn/20181029093141515.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTM3Nzg5MDU=,size_12,color_FFFFFF,t_70)
-# 5. 参考资料
+# 5. 搭建自己的个人博客
+## jekyll的下载安装
+### 安装ruby 
+因为jekyll依赖于ruby，所以必须先安装ruby
+[下载网址](https://www.ruby-lang.org/en/downloads/)
+### 测试是否安装成功
+![测试](https://img-blog.csdnimg.cn/20190228134740728.PNG)
+### 安装jekyll
+在命令行中输入`gem install jekyll`，jekyll安装完成后，还不能使用，还要安装一些组件。此时在命令行中输入`gem install bundler`，安装完成后，再在命令行中输入`bundle install`。这些步骤做完之后，jekyll就可以使用了
+# 6. 参考资料
 [如何使用GitHub创建一个自己的博客并且上传](https://blog.csdn.net/weixin_46323637/article/details/108287483) <br>
 [GitHub如何配置SSH Key](https://blog.csdn.net/u013778905/article/details/83501204) <br>
 [Markdown基本语法](https://www.jianshu.com/p/191d1e21f7ed/)
